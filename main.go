@@ -13,26 +13,34 @@ func main() {
 	const inputFile = "input.yaml"
 	const outputFile = "output.json"
 
-	yamlContent, err := os.ReadFile(inputFile)
+	if err := convertYAMLFileToJSONFile(inputFile, outputFile); err != nil {
+		exitWithError("converting input.yaml to output.json", err)
+	}
+
+	fmt.Println("Converted input.yaml to output.json")
+}
+
+func convertYAMLFileToJSONFile(inputPath, outputPath string) error {
+	yamlContent, err := os.ReadFile(inputPath)
 	if err != nil {
-		exitWithError("reading input.yaml", err)
+		return fmt.Errorf("reading %s: %w", inputPath, err)
 	}
 
 	jsonContent, err := yaml.YAMLToJSON(yamlContent)
 	if err != nil {
-		exitWithError("converting YAML to JSON", err)
+		return fmt.Errorf("converting YAML to JSON: %w", err)
 	}
 
 	var prettyJSON bytes.Buffer
 	if err := json.Indent(&prettyJSON, jsonContent, "", "  "); err != nil {
-		exitWithError("formatting JSON", err)
+		return fmt.Errorf("formatting JSON: %w", err)
 	}
 
-	if err := os.WriteFile(outputFile, prettyJSON.Bytes(), 0o644); err != nil {
-		exitWithError("writing output.json", err)
+	if err := os.WriteFile(outputPath, prettyJSON.Bytes(), 0o644); err != nil {
+		return fmt.Errorf("writing %s: %w", outputPath, err)
 	}
 
-	fmt.Println("Converted input.yaml to output.json")
+	return nil
 }
 
 func exitWithError(action string, err error) {
