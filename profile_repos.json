@@ -1,0 +1,52 @@
+{
+  "profile": "lysakova",
+  "refreshed_at": "2026-02-23T22:43:54Z",
+  "repo_count": 3,
+  "repos": [
+    {
+      "archived": false,
+      "description": "Stay aware of your LI skills and endorsements",
+      "fork": false,
+      "forks_count": 0,
+      "full_name": "lysakova/skillaby",
+      "html_url": "https://github.com/lysakova/skillaby",
+      "language": "Python",
+      "name": "skillaby",
+      "open_issues_count": 0,
+      "pushed_at": "2026-02-23T22:39:53Z",
+      "stargazers_count": 0,
+      "updated_at": "2026-02-23T22:39:58Z",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "description": "Exercise: Scale Institutional Knowledge Using Copilot Spaces",
+      "fork": false,
+      "forks_count": 0,
+      "full_name": "lysakova/skills-scale-institutional-knowledge-using-copilot-spaces",
+      "html_url": "https://github.com/lysakova/skills-scale-institutional-knowledge-using-copilot-spaces",
+      "language": null,
+      "name": "skills-scale-institutional-knowledge-using-copilot-spaces",
+      "open_issues_count": 3,
+      "pushed_at": "2026-02-18T16:23:08Z",
+      "stargazers_count": 0,
+      "updated_at": "2026-02-18T16:11:28Z",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "description": null,
+      "fork": false,
+      "forks_count": 0,
+      "full_name": "lysakova/yayayaml",
+      "html_url": "https://github.com/lysakova/yayayaml",
+      "language": "Go",
+      "name": "yayayaml",
+      "open_issues_count": 0,
+      "pushed_at": "2026-02-13T01:09:32Z",
+      "stargazers_count": 0,
+      "updated_at": "2026-02-13T01:09:26Z",
+      "visibility": "public"
+    }
+  ]
+}
